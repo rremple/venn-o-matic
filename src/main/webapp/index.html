@@ -1,0 +1,35 @@
+<div class="lift:surround?with=default;at=content">
+    Build a geometrically correct Venn diagram by entering areas for each
+    of three circles and their intersections:
+    <div class="lift:FormProcessingSnippet?form=post">
+        A<span class="lift:Msg?id=a;errorClass=error"></span>: 
+        <input name="a"/> 
+        B<span class="lift:Msg?id=b;errorClass=error"></span>:
+        <input name="b"/> 
+        C<span class="lift:Msg?id=c;errorClass=error"></span>:
+        <input name="c"/><br/>
+
+        A&#x2229;B<span class="lift:Msg?id=ab;errorClass=error"></span>:
+        <input name="ab"/> 
+        B&#x2229;C<span class="lift:Msg?id=bc;errorClass=error"></span>:
+        <input name="bc"/> 
+        C&#x2229;A<span class="lift:Msg?id=ca;errorClass=error"></span>:
+        <input name="ca"/><br/>
+
+        <input type="submit" value="Submit"/>
+
+        <span id="diag">
+            A&#x2229;B&#x2229;C = <span id="intersectionABC">0</span>
+            <svg id="svgelem" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                 height="65%" viewBox="0 0 0 0">
+            <g stroke-width="100%" stroke-dasharray="0.1,0.9" stroke="lightblue" id="grid"/> 
+            <g stroke-width="0.2%" stroke="red" fill="none" id="axes"/>
+            <g stroke-width="0.5%" stroke="blue" fill="none" id="circles"/>
+            <g stroke-width="0.4%" stroke="red" fill="blue" id="centers"/>
+            <g stroke-width="0.4%" stroke="black" fill="none" id="chords"/>
+            </svg>
+        </span>
+
+    </div>
+</div>
+
